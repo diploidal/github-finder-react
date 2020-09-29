@@ -45,17 +45,6 @@ export const ResultContainer = (props) => {
         </div>
       </div>
       <Table repoData={props}/>
-      {/* Dummy data just for development */}
-        <h4>Name: {user.name}</h4> 
-        <h4>Login: {user.login}</h4> 
-        <h4>Location: {user.location}</h4> 
-        <h4>User ID: {user.id}</h4>
-        <h4>Company: {user.company}</h4>
-        <h4>Has {user.followers} followers</h4>
-        <h4>Follows {user.following} users</h4>
-        <h4>User ID: {user.id}</h4>
-        <h4>{user.public_repos} public repositories</h4>
-        <h4>Last update - {user.updated_at}</h4>
     </div>
     : <h1>Ohhh snap there is nothing here...</h1>
   )
