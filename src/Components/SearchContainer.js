@@ -13,7 +13,7 @@ export const SearchContainer = () => {
     });
     const repoResponse = await fetch(`${API_LINK}/${name}/repos`);
     repoResponse.json().then((data) => {
-      requestData.respos = data;
+      requestData.repos = data;
       setData(requestData);
       console.log(requestData);
     });

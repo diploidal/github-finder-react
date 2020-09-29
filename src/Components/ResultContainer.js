@@ -1,7 +1,9 @@
 import React from 'react';
+import { Table } from './TableComponent'
 
 export const ResultContainer = (props) => {
   const user = props.requestData?.user;
+  const repos = props.requestData?.repos
 
   return (
     user ? 
@@ -42,6 +44,7 @@ export const ResultContainer = (props) => {
           </div>
         </div>
       </div>
+      <Table repoData={props}/>
       {/* Dummy data just for development */}
         <h4>Name: {user.name}</h4> 
         <h4>Login: {user.login}</h4> 
