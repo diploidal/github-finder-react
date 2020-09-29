@@ -23,22 +23,16 @@ export const SearchContainer = () => {
   const [data, setData] = useState();
 
   return (
-    <div>
-      {/* <form onSubmit={handleRequest}>
-        <input type="text" 
-          value={name || ''}
-          onChange={(e) => setName(e.target.value)}  
-          />
-        </form> */}
-      <div class="input-group mb-3">
+    <>
+      <div className="input-group mb-3">
         <form onSubmit={handleRequest}>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+          <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
           value={name || ''}
           onChange={(e) => setName(e.target.value)}  
           />
         </form>
       </div>
       <ResultContainer requestData={data}/>
-    </div>
+    </>
   )
 }

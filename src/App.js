@@ -5,7 +5,7 @@ import { SearchContainer } from './Components/SearchContainer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <header className="App-header">
         <h1>Hey there !</h1>
         <SearchContainer/>
