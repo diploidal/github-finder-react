@@ -3,8 +3,12 @@ import { RepoCard } from './RepositoryCard'
 
 export const ResultContainer = (props) => {
   const user = props.requestData?.user;
-  const repos = props.requestData?.repos
-
+  /* 
+    TODO:
+     [] fix date presentation/formating
+     [] cleanup whole component (divide into smaller one eg. card, badges as separated components)
+     
+  */
   return (
     user ? 
     <div>
@@ -15,8 +19,8 @@ export const ResultContainer = (props) => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h1 className="card-title">{user.login}</h1>
-              <div className="row">
+              <h1 className="display-4">{user.login}</h1>
+              <div className="row" style={{textAlign: 'center'}}>
                 <div className="col">
                   <p className="card-text">
                     <small className="text-muted">{user.name}</small>

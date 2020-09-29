@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App container">
       <header className="App-header">
-        <h1>Hey there !</h1>
         <SearchContainer/>
       </header>
     </div>

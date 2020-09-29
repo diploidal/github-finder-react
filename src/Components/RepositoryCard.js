@@ -4,12 +4,18 @@ export const RepoCard = (props) => {
   const data = props.repoData.requestData.repos;
   console.log(data)
   return(
-    <>
+    <div className="container">
       {data ? data.map((element, index) => {
         return (
-          <div key={index} className="card" style={{width: '34rem'}}>
+          <div key={index} className="card mx-auto my-4" style={{maxWidth: '1024px'}}>
             <div className="card-body">
               <h5 className="card-title font-weight-bold">{element.name}</h5>
+              <p className="card-text">{element.description}</p>
+              <div className="mb-2">
+                <span className="badge bg-primary mr-2">Forks: {element.forks_count}</span>
+                <span className="badge bg-primary mr-2">Watchers: {element.watchers_count}</span>
+                <span className="badge bg-primary">Stars: {element.stargazers_count}</span>
+              </div>
               <div className="row">
                 <div className="col">
                   <p className="card-subtitle mb-2 text-muted">
@@ -26,7 +32,6 @@ export const RepoCard = (props) => {
                   </p>
                 </div>
               </div>
-              <p className="card-text">{element.description}</p>
               <a href={element.html_url} target="_blank" rel="noopener noreferrer" className="card-link">
                 Check this repo
               </a>
@@ -34,7 +39,7 @@ export const RepoCard = (props) => {
           </div>
         ) 
       }) : <h1>Oops there are no repositories <span aria-label="sad-emoji" role="img">😞</span></h1>}
-    </>
+    </div>
 
 
   )
