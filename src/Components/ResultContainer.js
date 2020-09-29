@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from './TableComponent'
+import { RepoCard } from './RepositoryCard'
 
 export const ResultContainer = (props) => {
   const user = props.requestData?.user;
@@ -44,7 +44,7 @@ export const ResultContainer = (props) => {
           </div>
         </div>
       </div>
-      <Table repoData={props}/>
+      <RepoCard repoData={props}/>
     </div>
     : <h1>Ohhh snap there is nothing here...</h1>
   )

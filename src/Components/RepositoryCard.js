@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Table = (props) => {
+export const RepoCard = (props) => {
   const data = props.repoData.requestData.repos;
   console.log(data)
   return(
