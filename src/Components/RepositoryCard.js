@@ -5,7 +5,7 @@ export const RepoCard = (props) => {
   console.log(data)
   return(
     <div className="container">
-      {data ? data.map((element, index) => {
+      {data.length > 0 ? data.map((element, index) => {
         return (
           <div key={index} className="card mx-auto my-4" style={{maxWidth: '1024px'}}>
             <div className="card-body">

@@ -1,0 +1,7 @@
+.dupa {
+  transition: box-shadow 0.5s ease;
+  box-shadow: 10px 10px 8px transparent;
+}
+.dupa input:focus {
+  box-shadow: 0px 2px 50px #025ce2;
+}

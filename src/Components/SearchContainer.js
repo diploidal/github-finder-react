@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ResultContainer } from './ResultContainer';
+import styles from './SearchContainer.module.css'
 
 export const SearchContainer = () => {
   let requestData = {};
@@ -24,9 +25,15 @@ export const SearchContainer = () => {
 
   return (
     <>
-      <div className="input-group mb-3">
-        <form onSubmit={handleRequest}>
-          <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+      <div style={{padding: '10rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', background: 'rgb(98,98,98)', background: 'linear-gradient(180deg, rgba(195,195,195,1) 0%, rgba(255,255,255,1) 100%)'}}>
+      <h1 className="mb-5" style={{textAlign: 'center'}}>Search for a Github username to start...</h1>
+        <form className={styles.dupa} onSubmit={handleRequest}>
+          <input 
+          type="text" 
+          className="form-control" 
+          placeholder="Github Username" 
+          aria-label="Username" 
+          aria-describedby="basic-addon1"
           value={name || ''}
           onChange={(e) => setName(e.target.value)}  
           />

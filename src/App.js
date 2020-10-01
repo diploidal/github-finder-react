@@ -5,10 +5,8 @@ import { SearchContainer } from './Components/SearchContainer';
 
 function App() {
   return (
-    <div className="App container">
-      <header className="App-header">
-        <SearchContainer/>
-      </header>
+    <div className="App">
+      <SearchContainer/>
     </div>
   );
 }

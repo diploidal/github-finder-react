@@ -11,11 +11,11 @@ export const ResultContainer = (props) => {
   */
   return (
     user ? 
-    <div>
+    <div className="container" style={{marginTop: '4rem'}}>
       <div className="card mb-3 mx-auto" style={{maxWidth: '1024px'}}>
         <div className="row g-0">
           <div className="col-md-4">
-            <img src={user.avatar_url} className="img-thumbnail" alt="profile"/>
+            <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent'}}/>
           </div>
           <div className="col-md-8">
             <div className="card-body">
