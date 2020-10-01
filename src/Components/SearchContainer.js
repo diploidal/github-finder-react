@@ -25,9 +25,9 @@ export const SearchContainer = () => {
 
   return (
     <>
-      <div style={{padding: '10rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', background: 'rgb(98,98,98)', background: 'linear-gradient(180deg, rgba(195,195,195,1) 0%, rgba(255,255,255,1) 100%)'}}>
+      <div style={{padding: '6rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgb(98,98,98)', background: 'linear-gradient(180deg, rgba(195,195,195,1) 0%, rgba(255,255,255,1) 80%)'}}>
       <h1 className="mb-5" style={{textAlign: 'center'}}>Search for a Github username to start...</h1>
-        <form className={styles.dupa} onSubmit={handleRequest}>
+        <form className={styles.formFocus} onSubmit={handleRequest}>
           <input 
           type="text" 
           className="form-control" 

@@ -8,7 +8,7 @@ export const RepoCard = (props) => {
       {data.length > 0 ? data.map((element, index) => {
         return (
           <div key={index} className="card mx-auto my-4" style={{maxWidth: '1024px'}}>
-            <div className="card-body">
+            <div className="card-body" style={{boxShadow: '0px 2px 80px #888888'}}>
               <h5 className="card-title font-weight-bold">{element.name}</h5>
               <p className="card-text">{element.description}</p>
               <div className="mb-2">
@@ -20,14 +20,14 @@ export const RepoCard = (props) => {
                 <div className="col">
                   <p className="card-subtitle mb-2 text-muted">
                     <small className="text-muted">
-                      Created {element.created_at}
+                      Created: {element.created_at}
                     </small>
                   </p>
                 </div>
                 <div className="col">
                   <p className="card-subtitle mb-2 text-muted">
                     <small className="text-muted">
-                      Updated {element.updated_at}
+                      Updated: {element.updated_at}
                     </small>
                   </p>
                 </div>

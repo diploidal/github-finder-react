@@ -14,11 +14,11 @@ export const ResultContainer = (props) => {
     <div className="container" style={{marginTop: '4rem'}}>
       <div className="card mb-3 mx-auto" style={{maxWidth: '1024px'}}>
         <div className="row g-0">
-          <div className="col-md-4">
-            <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent'}}/>
+          <div className="col-md-6">
+            <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent', padding: '0', width: '100%'}}/>
           </div>
-          <div className="col-md-8">
-            <div className="card-body">
+          <div className="col-md-6">
+            <div className="card-body" style={{boxShadow: '0px 2px 80px #888888', height: '100%'}}>
               <h1 className="display-4">{user.login}</h1>
               <div className="row" style={{textAlign: 'center'}}>
                 <div className="col">
