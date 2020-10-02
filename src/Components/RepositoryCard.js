@@ -3,6 +3,14 @@ import React from 'react'
 export const RepoCard = (props) => {
   const data = props.repoData.requestData.repos;
   console.log(data)
+
+  const convertDate = (date) => {
+    const dateToEpoch = Date.parse(date);
+    const createDateObject = new Date(dateToEpoch)
+    const formatedDate = createDateObject.toUTCString()
+    return formatedDate;
+  }
+
   return(
     <div className="container">
       {data.length > 0 ? data.map((element, index) => {
@@ -20,14 +28,14 @@ export const RepoCard = (props) => {
                 <div className="col">
                   <p className="card-subtitle mb-2 text-muted">
                     <small className="text-muted">
-                      Created: {element.created_at}
+                      Created:<br/> {convertDate(element.created_at)}
                     </small>
                   </p>
                 </div>
                 <div className="col">
                   <p className="card-subtitle mb-2 text-muted">
                     <small className="text-muted">
-                      Updated: {element.updated_at}
+                      Updated:<br/> {convertDate(element.updated_at)}
                     </small>
                   </p>
                 </div>

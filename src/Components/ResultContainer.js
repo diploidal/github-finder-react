@@ -5,10 +5,18 @@ export const ResultContainer = (props) => {
   const user = props.requestData?.user;
   /* 
     TODO:
-     [] fix date presentation/formating
+     [x] fix date presentation/formating
      [] cleanup whole component (divide into smaller one eg. card, badges as separated components)
      
   */
+
+ const convertDate = (date) => {
+  const dateToEpoch = Date.parse(date);
+  const createDateObject = new Date(dateToEpoch)
+  const formatedDate = createDateObject.toUTCString()
+  return formatedDate;
+}
+
   return (
     user ? 
     <div className="container" style={{marginTop: '4rem'}}>
@@ -40,10 +48,13 @@ export const ResultContainer = (props) => {
                   <p className="card-text"><small className="text-muted">{user.id}</small></p>
                 </div>
               </div>
-                <p className="card-text">{user.bio}</p>
+                <p className="card-text mt-3">{user.bio}</p>
                 <a href={user.blog} className="link-primary">{user.blog}</a>
-                <p className="card-text"><small className="text-muted">Last update {user.updated_at}</small></p>
-                <p className="card-text"><small className="text-muted">Created at {user.created_at}</small></p>
+                <div className="mt-5">
+                  <h5>Account info</h5>
+                  <p className="card-text"><small className="text-muted">Last update on {convertDate(user.updated_at)}</small></p>
+                  <p className="card-text"><small className="text-muted">Created at {convertDate(user.created_at)}</small></p>
+                </div>
             </div>
           </div>
         </div>
