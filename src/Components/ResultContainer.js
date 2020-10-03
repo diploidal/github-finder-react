@@ -1,8 +1,11 @@
 import React from 'react';
 import { RepoCard } from './RepositoryCard'
+import { Emote } from './ASCIIEmotes';
 
 export const ResultContainer = (props) => {
-  // const checkStatus = props.requestData?.ok
+
+  const requestResultStatus = props.requestData?.response?.ok;
+  console.log(`requestResultStatus ${requestResultStatus}`)
   const user = props.requestData?.user;
   /* 
     TODO:
@@ -19,7 +22,7 @@ export const ResultContainer = (props) => {
 }
 
   return (
-    user ? 
+    requestResultStatus ? 
     <div className="container" style={{marginTop: '4rem'}}>
       <div className="card mb-3 mx-auto" style={{maxWidth: '1024px'}}>
         <div className="row g-0">
@@ -27,7 +30,7 @@ export const ResultContainer = (props) => {
             <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent', padding: '0', width: '100%'}}/>
           </div>
           <div className="col-md-6">
-            <div className="card-body" style={{boxShadow: '0px 2px 80px #888888', height: '100%'}}>
+            <div className="card-body" style={{boxShadow: '0px 2px 30px #888888', height: '100%'}}>
               <h1 className="display-4">{user.login}</h1>
               <div className="row" style={{textAlign: 'center'}}>
                 <div className="col">
@@ -62,6 +65,6 @@ export const ResultContainer = (props) => {
       </div>
       <RepoCard repoData={props}/>
     </div>
-    : <h1>Ohhh snap there is nothing here...</h1>
+    : <Emote/>
   )
 }

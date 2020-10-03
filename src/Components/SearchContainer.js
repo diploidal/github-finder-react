@@ -9,24 +9,25 @@ export const SearchContainer = () => {
     const API_LINK = `https://api.github.com/users`;
     event.preventDefault();
     const response = await fetch(`${API_LINK}/${name}`);
-    // console.log(response)
     if(!response.ok) {
-      setData(response)
-      console.log(response)
-      // return
+      requestData.response = response
+      setData(requestData)
     } else {
       response.json().then((data) => {
         requestData.user = data;
+        requestData.response = response;
       });
       const repoResponse = await fetch(`${API_LINK}/${name}/repos`);
-      repoResponse.json().then((data) => {
-        // console.log(data)
-        requestData.repos = data;
-        setData(requestData);
-        // console.log(requestData);
-      })
+      if(!repoResponse.ok) {
+        setData(repoResponse)
+      } else {
+        repoResponse.json().then((data) => {
+          requestData.repos = data;
+          requestData.response = response;
+          setData(requestData);
+        })
+      }
     }
-    // console.log(data)
   };
 
   const [name, setName] = useState();

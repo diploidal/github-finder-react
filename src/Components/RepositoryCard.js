@@ -15,7 +15,7 @@ export const RepoCard = (props) => {
       {data.length > 0 ? data.map((element, index) => {
         return (
           <div key={index} className="card mx-auto my-4" style={{maxWidth: '1024px'}}>
-            <div className="card-body" style={{boxShadow: '0px 2px 80px #888888'}}>
+            <div className="card-body" style={{boxShadow: '0px 2px 30px #888888'}}>
               <h5 className="card-title font-weight-bold">{element.name}</h5>
               <p className="card-text">{element.description}</p>
               <div className="mb-2">
