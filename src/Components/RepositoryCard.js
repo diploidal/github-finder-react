@@ -2,7 +2,6 @@ import React from 'react'
 
 export const RepoCard = (props) => {
   const data = props.repoData.requestData.repos;
-  console.log(data)
 
   const convertDate = (date) => {
     const dateToEpoch = Date.parse(date);

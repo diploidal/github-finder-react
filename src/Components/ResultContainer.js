@@ -2,6 +2,7 @@ import React from 'react';
 import { RepoCard } from './RepositoryCard'
 
 export const ResultContainer = (props) => {
+  // const checkStatus = props.requestData?.ok
   const user = props.requestData?.user;
   /* 
     TODO:
@@ -22,7 +23,7 @@ export const ResultContainer = (props) => {
     <div className="container" style={{marginTop: '4rem'}}>
       <div className="card mb-3 mx-auto" style={{maxWidth: '1024px'}}>
         <div className="row g-0">
-          <div className="col-md-6">
+          <div className="col-md-6" style={{alignSelf: 'center'}}>
             <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent', padding: '0', width: '100%'}}/>
           </div>
           <div className="col-md-6">
