@@ -15,31 +15,34 @@ export const RepoCard = (props) => {
       {data.length > 0 ? data.map((element, index) => {
         return (
           <div key={index} className="card mx-auto my-4" style={{maxWidth: '1024px'}}>
-            <div className="card-body" style={{boxShadow: '0px 2px 30px #888888'}}>
+            <div className="card-body">
+              <div className="row">
+                <div className="col-md-7">
+                  
               <h5 className="card-title font-weight-bold">{element.name}</h5>
               <p className="card-text">{element.description}</p>
               <div className="mb-2">
                 <span className="badge bg-primary mr-2">Forks: {element.forks_count}</span>
-                <span className="badge bg-primary mr-2">Watchers: {element.watchers_count}</span>
-                <span className="badge bg-primary">Stars: {element.stargazers_count}</span>
+                <span className="badge bg-success mr-2">Watchers: {element.watchers_count}</span>
+                <span className="badge bg-dark">Stars: {element.stargazers_count}</span>
               </div>
-              <div className="row">
-                <div className="col">
-                  <p className="card-subtitle mb-2 text-muted">
+
+                </div>
+                <div className="col-md-5">
+                <p className="card-subtitle my-2 text-muted">
                     <small className="text-muted">
-                      Created:<br/> {convertDate(element.created_at)}
+                      <b>Created:</b><br/> {convertDate(element.created_at)}
                     </small>
                   </p>
-                </div>
-                <div className="col">
-                  <p className="card-subtitle mb-2 text-muted">
+                  <p className="card-subtitle my-2 text-muted">
                     <small className="text-muted">
-                      Updated:<br/> {convertDate(element.updated_at)}
+                      <b>Updated:</b><br/> {convertDate(element.updated_at)}
                     </small>
                   </p>
+
                 </div>
               </div>
-              <a href={element.html_url} target="_blank" rel="noopener noreferrer" className="card-link">
+                <a href={element.html_url} target="_blank" rel="noopener noreferrer" className="link-primary">
                 Check this repo
               </a>
             </div>

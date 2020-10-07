@@ -30,12 +30,12 @@ export const SearchContainer = () => {
     }
   };
 
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [data, setData] = useState();
 
   return (
     <>
-      <div style={{padding: '6rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgb(98,98,98)', background: 'linear-gradient(180deg, rgba(195,195,195,1) 0%, rgba(255,255,255,1) 80%)'}}>
+      <div style={{padding: '6rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
       <h1 className="mb-5" style={{textAlign: 'center'}}>Search for a Github username to start...</h1>
         <form className={styles.formFocus} onSubmit={handleRequest}>
           <input 
@@ -44,7 +44,7 @@ export const SearchContainer = () => {
           placeholder="Github Username" 
           aria-label="Username" 
           aria-describedby="basic-addon1"
-          value={name || ''}
+          value={name}
           onChange={(e) => setName(e.target.value)}  
           />
         </form>

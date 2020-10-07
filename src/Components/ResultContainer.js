@@ -3,9 +3,7 @@ import { RepoCard } from './RepositoryCard'
 import { Emote } from './ASCIIEmotes';
 
 export const ResultContainer = (props) => {
-
   const requestResultStatus = props.requestData?.response?.ok;
-  console.log(`requestResultStatus ${requestResultStatus}`)
   const user = props.requestData?.user;
   /* 
     TODO:
@@ -30,30 +28,53 @@ export const ResultContainer = (props) => {
             <img src={user.avatar_url} className="img-thumbnail" alt="profile" style={{borderColor: 'transparent', padding: '0', width: '100%'}}/>
           </div>
           <div className="col-md-6">
-            <div className="card-body" style={{boxShadow: '0px 2px 30px #888888', height: '100%'}}>
-              <h1 className="display-4">{user.login}</h1>
-              <div className="row" style={{textAlign: 'center'}}>
-                <div className="col">
-                  <p className="card-text">
-                    <small className="text-muted">{user.name}</small>
-                    </p>
+            <div className="card-body" style={{height: '100%'}}>
+              <b><h1 className="display-4">{user.login}</h1></b>
+              <div className="row">
+                <div className="col-xs-12 col-md-6">
+                  <h5 className="card-text my-2">
+                    <small className="text-muted">Name:<br/></small>
+                    {user.name}
+                  </h5>
                 </div>
-                <div className="col">
-                  <p className="card-text">
+                <div className="col-xs-12 col-md-6">
+                <h5 className="card-text my-2">
+                    <small className="text-muted">Location:<br/></small>
+                    {user.location}
+                  </h5>
+
+                  {/* <h5 className="card-text my-2">
+                    Loc:<br/>
                     <small className="text-muted">{user.location}</small>
-                    </p>
+                    </h5> */}
                 </div>
-                <div className="col">
-                  <p className="card-text">
+                <div className="col-xs-12 col-md-6">
+
+                <h5 className="card-text my-2">
+                  <small className="text-muted">Company:<br/></small>
+                  {user.company}
+                </h5>
+                  {/* <h5 className="card-text my-2">
+                    Company:<br/>
                     <small className="text-muted">{user.company}</small>
-                    </p>
+                    </h5> */}
                 </div>
-                <div className="col">
-                  <p className="card-text"><small className="text-muted">{user.id}</small></p>
+                <div className="col-xs-12 col-md-6">
+                <h5 className="card-text my-2">
+                    <small className="text-muted">uID:<br/></small>
+                    {user.id}
+                  </h5>
+                  {/* uID:<br/>
+                  <h5 className="card-text my-2"><small className="text-muted">{user.id}</small></h5> */}
                 </div>
               </div>
-                <p className="card-text mt-3">{user.bio}</p>
+              <div>
+                <h5 className="mt-3">
+                  <small className="text-muted">Bio:</small>
+                </h5>
+                <p className="card-text">{user.bio}</p>
                 <a href={user.blog} className="link-primary">{user.blog}</a>
+              </div>
                 <div className="mt-5">
                   <h5>Account info</h5>
                   <p className="card-text"><small className="text-muted">Last update on {convertDate(user.updated_at)}</small></p>
