@@ -7,7 +7,7 @@ export const Emote = () => {
     texts: [`Ahhh dang it !`, `Ooops, nothing here !`, `Can't find any Github user`, `Ugh...`]
   }
 
-  function getRandom() {
+  const getRandom = () => {
     const selectedRandomEmoji = emotesAndTexts.emotes[Math.floor(Math.random()*emotesAndTexts.emotes.length)];
     const selectedRandomText = emotesAndTexts.texts[Math.floor(Math.random()*emotesAndTexts.texts.length)];
 
