@@ -1,6 +1,6 @@
 import React from 'react';
 import { RepoCard } from './RepositoryCard'
-import { Emote } from './ASCIIEmotes';
+// import { Emote } from './ASCIIEmotes';
 
 export const ResultContainer = (props) => {
   const requestResultStatus = props.requestData?.response?.ok;
@@ -69,6 +69,6 @@ export const ResultContainer = (props) => {
       <hr/>
       <RepoCard repoData={props}/>
     </div>
-    : <Emote/>
+    : null
   )
 }

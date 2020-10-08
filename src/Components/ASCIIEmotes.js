@@ -24,7 +24,7 @@ export const Emote = () => {
   return (
     <div className="container" style={{textAlign: 'center'}}>
       <h1 style={{fontSize: '16vw', color: '#dadce0'}}>{emoji}</h1>
-      <h2 className="mt-2">{text}</h2>
+      <h2 className="mt-4">{text}</h2>
     </div>
   )
 }
