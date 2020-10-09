@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const RepoCard = (props) => {
-  const data = props.repoData.requestData.repos;
+export const RepositoryCard = (props) => {
+  const data = props.repoData?.requestData?.repos;
 
   const convertDate = (date) => {
     const dateToEpoch = Date.parse(date);

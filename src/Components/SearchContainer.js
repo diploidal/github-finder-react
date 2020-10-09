@@ -3,7 +3,7 @@ import { ResultContainer } from './ResultContainer';
 
 export const SearchContainer = () => {
   let requestData = {};
-
+  
   const handleRequest = async (event) => {
     const API_LINK = `https://api.github.com/users`;
     event.preventDefault();
@@ -15,23 +15,19 @@ export const SearchContainer = () => {
       response.json().then((data) => {
         requestData.user = data;
         requestData.response = response;
-      });
+      })
       const repoResponse = await fetch(`${API_LINK}/${name}/repos`);
-      if(!repoResponse.ok) {
-        setData(repoResponse)
-      } else {
-        repoResponse.json().then((data) => {
-          requestData.repos = data;
-          requestData.response = response;
-          setData(requestData);
-        })
-      }
+      repoResponse.json().then((data) => {
+        requestData.repos = data;
+        requestData.response = response;
+        setData(requestData);
+      })
     }
   };
-
+  
   const [name, setName] = useState("");
   const [data, setData] = useState();
-
+  
   return (
     <>
       <div style={{padding: '6rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
@@ -46,8 +42,11 @@ export const SearchContainer = () => {
             aria-label="Username" 
             aria-describedby="basic-addon1"
             value={name}
-            onChange={(e) => setName(e.target.value)}  
+            onChange={(e) => {setName(e.target.value)}}
           />
+          <button type="submit" className="btn btn-primary btn-lg btn-block mt-4">
+            Search
+          </button>
         </form>
       </div>
       <ResultContainer requestData={data}/>
