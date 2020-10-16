@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ResultContainer } from './ResultContainer';
 
 export const SearchContainer = () => {
+  const [name, setName] = useState('');
+  const [data, setData] = useState();
   let requestData = {};
   
   const handleRequest = async (event) => {
@@ -25,8 +27,6 @@ export const SearchContainer = () => {
     }
   };
   
-  const [name, setName] = useState("");
-  const [data, setData] = useState();
   
   return (
     <>
@@ -44,7 +44,7 @@ export const SearchContainer = () => {
             value={name}
             onChange={(e) => {setName(e.target.value)}}
           />
-          <button type="submit" className="btn btn-primary btn-lg btn-block mt-4">
+          <button type="submit" className="btn btn-primary btn-block mt-4">
             Search
           </button>
         </form>
