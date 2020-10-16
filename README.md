@@ -1,5 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo
+## Project info
+[Bootstrap v5 alpha](https://v5.getbootstrap.com/)
 
+[Github API](https://api.github.com)
+
+[Create React App](https://github.com/facebook/create-react-app)
+
+### Hosted on [Vercel](https://vercel.com/)
+---
 ## Available Scripts
 
 In the project directory, you can run:
