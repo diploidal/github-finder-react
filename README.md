@@ -1,4 +1,6 @@
 ## Live demo
+[https://github-finder-react.vercel.app/](https://github-finder-react.vercel.app/)
+
 ## Project info
 [Bootstrap v5 alpha](https://v5.getbootstrap.com/)
 
@@ -6,7 +8,8 @@
 
 [Create React App](https://github.com/facebook/create-react-app)
 
-### Hosted on [Vercel](https://vercel.com/)
+[Live demo](https://github-finder-react.vercel.app/)
+## Hosted on [Vercel](https://vercel.com/)
 ---
 ## Available Scripts
 
