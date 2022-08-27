@@ -8,7 +8,7 @@
 
 [Create React App](https://github.com/facebook/create-react-app)
 
-[Live demo](https://github-finder-react.vercel.app/)
+[Live demo](https://github-finder-react-eosin.vercel.app/)
 ## Hosted on [Vercel](https://vercel.com/)
 ---
 ## Available Scripts
