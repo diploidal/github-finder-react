@@ -1,5 +1,5 @@
 ## Live demo
-[https://github-finder-react.vercel.app/](https://github-finder-react.vercel.app/)
+[https://github-finder-react.vercel.app/](https://github-finder-react-eosin.vercel.app/)
 
 ## Project info
 [Bootstrap v5 alpha](https://v5.getbootstrap.com/)
