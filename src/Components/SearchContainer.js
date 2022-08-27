@@ -27,7 +27,7 @@ export const SearchContainer = () => {
     }
   };
   
-  
+
   return (
     <>
       <div style={{padding: '6rem 0', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>

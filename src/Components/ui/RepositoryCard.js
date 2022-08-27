@@ -22,8 +22,8 @@ export const RepositoryCard = (props) => {
               <h5 className="card-title font-weight-bold">{element.name}</h5>
               <p className="card-text">{element.description}</p>
               <div className="mb-2">
-                <span className="badge bg-primary mr-2">Forks: {element.forks_count}</span>
-                <span className="badge bg-success mr-2">Watchers: {element.watchers_count}</span>
+                <span className="badge bg-primary me-2">Forks: {element.forks_count}</span>
+                <span className="badge bg-success me-2">Watchers: {element.watchers_count}</span>
                 <span className="badge bg-dark">Stars: {element.stargazers_count}</span>
               </div>
 
